@@ -34,16 +34,17 @@ final class Channel {
 
 // MARK: Transmission Protocol
 extension Channel: TransmissionProtocol {
-    func sendFakeData(id: Int) {
-        print("[Canal de transmissão] - Dados recebidos do [Transmissor \(id)]\n")
-        resetChannel()
-    }
-    
     func transmitterWillSendData(id: Int) {
         print("[Canal de transmissão] - Transmissor \(id) está se preparando para enviar dados\n")
         status = .unavailable
         control+=1
         NotificationCenter.default.post(name: Notification.Name("Transmitter\(id)TransmissionConfirmed"), object: nil)
+    }
+    
+    func sendFakeData(id: Int) {
+        print("[Canal de transmissão] - Dados recebidos do [Transmissor \(id)]\n")
+        NotificationCenter.default.post(name: Notification.Name("Transmitter\(id)TransmissionFinished"), object: nil)
+        resetChannel()
     }
 }
 

@@ -8,15 +8,16 @@
 import SwiftUI
 import Combine
 
-let sensingTime = 3
+let globalClockTime = 3
 let numberOfTransmitters = 3
+let randomRange = 5
 
 final class Environment: ObservableObject {
     let channel: Channel
     
     var connectedTimer: Cancellable? = nil
     var transmitters: [Transmitter]
-    var globalClock = Timer.publish(every: TimeInterval(sensingTime), on: .main, in: .common).autoconnect()
+    var globalClock = Timer.publish(every: TimeInterval(globalClockTime), on: .main, in: .common).autoconnect()
     
     
     init() {
@@ -45,7 +46,7 @@ final class Environment: ObservableObject {
     
     func createTransmitters() {
         for index in 0..<numberOfTransmitters {
-            let sensingTime = Int.random(in: 1...10)
+            let sensingTime = Int.random(in: 1...randomRange)
             let transmitter = Transmitter(id: index+1, sensingTime: sensingTime)
             transmitters.append(transmitter)
             channel.linkTransmitter(transmitter: transmitter)

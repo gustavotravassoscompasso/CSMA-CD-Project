@@ -8,18 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		6DBB4E612A411AA2003647F6 /* CSMA_CD_ProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBB4E602A411AA2003647F6 /* CSMA_CD_ProjectApp.swift */; };
-		6DBB4E632A411AA2003647F6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBB4E622A411AA2003647F6 /* ContentView.swift */; };
 		6DBB4E652A411AA5003647F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DBB4E642A411AA5003647F6 /* Assets.xcassets */; };
 		6DBB4E682A411AA5003647F6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DBB4E672A411AA5003647F6 /* Preview Assets.xcassets */; };
+		6DBB4E702A412091003647F6 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBB4E6F2A412091003647F6 /* Environment.swift */; };
+		6DBB4E722A412146003647F6 /* Transmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBB4E712A412146003647F6 /* Transmitter.swift */; };
+		6DBB4E742A4123A5003647F6 /* Program.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBB4E732A4123A5003647F6 /* Program.swift */; };
+		6DBB4E762A41271B003647F6 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBB4E752A41271B003647F6 /* Channel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6DBB4E5D2A411AA2003647F6 /* CSMA-CD-Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CSMA-CD-Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DBB4E602A411AA2003647F6 /* CSMA_CD_ProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSMA_CD_ProjectApp.swift; sourceTree = "<group>"; };
-		6DBB4E622A411AA2003647F6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6DBB4E642A411AA5003647F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6DBB4E672A411AA5003647F6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6DBB4E692A411AA5003647F6 /* CSMA_CD_Project.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CSMA_CD_Project.entitlements; sourceTree = "<group>"; };
+		6DBB4E6F2A412091003647F6 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		6DBB4E712A412146003647F6 /* Transmitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transmitter.swift; sourceTree = "<group>"; };
+		6DBB4E732A4123A5003647F6 /* Program.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Program.swift; sourceTree = "<group>"; };
+		6DBB4E752A41271B003647F6 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +59,10 @@
 			isa = PBXGroup;
 			children = (
 				6DBB4E602A411AA2003647F6 /* CSMA_CD_ProjectApp.swift */,
-				6DBB4E622A411AA2003647F6 /* ContentView.swift */,
+				6DBB4E732A4123A5003647F6 /* Program.swift */,
+				6DBB4E6F2A412091003647F6 /* Environment.swift */,
+				6DBB4E752A41271B003647F6 /* Channel.swift */,
+				6DBB4E712A412146003647F6 /* Transmitter.swift */,
 				6DBB4E642A411AA5003647F6 /* Assets.xcassets */,
 				6DBB4E692A411AA5003647F6 /* CSMA_CD_Project.entitlements */,
 				6DBB4E662A411AA5003647F6 /* Preview Content */,
@@ -139,8 +148,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DBB4E632A411AA2003647F6 /* ContentView.swift in Sources */,
+				6DBB4E762A41271B003647F6 /* Channel.swift in Sources */,
+				6DBB4E722A412146003647F6 /* Transmitter.swift in Sources */,
+				6DBB4E702A412091003647F6 /* Environment.swift in Sources */,
 				6DBB4E612A411AA2003647F6 /* CSMA_CD_ProjectApp.swift in Sources */,
+				6DBB4E742A4123A5003647F6 /* Program.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

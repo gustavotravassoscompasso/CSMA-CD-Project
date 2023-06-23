@@ -53,9 +53,6 @@ final class Transmitter {
             transmitData()
             
         case .channelCrashed:
-            self.status = .mustPerformBackoff
-            
-        case .mustPerformBackoff:
             backoff()
             
         case .waiting:
@@ -89,7 +86,9 @@ final class Transmitter {
         print("[Transmissor \(self.id)] - Entrando em Backoff")
         
         if backoffAttemptsCount >= backoffMaxAttempts {
-            fatalError("[Transmissor \(self.id)] - Quantidade máxima de backoffs atingida\n")
+            backoffTime = 0
+            backoffAttemptsCount = 0
+            timeRemaining = Int.random(in: 1...10)
         } else if backoffTime == 0 {
             self.backoffTime = Int.random(in: 1...10)
             self.timeRemaining = backoffTime
@@ -145,7 +144,6 @@ extension Transmitter {
         case transmitting = "Transmitting"
         case transmitData = "Transmitting Data"
         case channelCrashed = "Channel Crashed"
-        case mustPerformBackoff = "Must Perform Backoff"
         case waiting = "Waiting time"
     }
 }

@@ -8,9 +8,9 @@
 import SwiftUI
 import Combine
 
-let globalClockTime = 3
+let globalClockTime = 1
 let numberOfTransmitters = 3
-let randomRange = 5
+let randomRange = 10
 
 final class Environment: ObservableObject {
     let channel: Channel

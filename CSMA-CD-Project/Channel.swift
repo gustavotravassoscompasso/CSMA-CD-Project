@@ -20,7 +20,7 @@ final class Channel {
     
     func verifyCrashs() {
         if control > 1 {
-            print("[Canal de transmissão] - Ocorreu um crash! Notifiying all transmitters\n")
+            print("[Canal de transmissão] - Ocorreu uma COLISÃO! Notificando os transmissores!\n")
             NotificationCenter.default.post(name: Notification.Name("Crash"), object: nil)
             resetChannel()
         }
